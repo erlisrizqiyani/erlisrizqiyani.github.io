@@ -1,0 +1,245 @@
+:root {
+    --primary-color: #1C1E22;
+    --secondary-color: #827397;
+}
+
+body {
+    background: linear-gradient(180deg, #353A40 0%, #16171B 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 50px 50px 0px 50px;
+}
+
+@font-face /*perintah untuk memanggil font eksternal*/
+{
+    font-family:berkshire; /*memberikan nama bebas untuk font*/
+    src: url("font/Berkshire_Swash/BerkshireSwash-Regular.ttf");/*memanggil file font eksternalnya di folder nexa*/
+}
+@font-face {
+    font-family: be vietnam;
+    src: url("font/Be_Vietnam_Pro/BeVietnamPro-Light.ttf");
+}
+.tab{
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.tabs{
+    height: 40px;
+    display: flex;
+    font-size: .9rem;
+    background-color: white;
+    padding: 8px;
+    border-radius: 100px;
+    position: relative;
+    box-shadow: 2px 5px 4px rgba(0,0,0,0.2);
+}
+
+.collapse navbar-collapse{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.glider{
+    position: absolute;
+    top: 10px;
+    left: 13px;
+    display: flex;
+    height: 20px;
+    width: 100px;
+    background-color: var(--secondary-color);
+    z-index: 1;
+    border-radius: 99px;
+    transition: 0.25s ease-out;
+}
+
+input[type=radio]:checked + label{
+    color: var(--primary-color);
+}
+
+input[id="nav-1"]:checked ~ .glider{
+    transform: translateX(0);
+    transition: 0.25s ease-out;
+}
+
+input[id="nav-2"]:checked ~ .glider{
+    transform: translateX(100%);
+    transition: 0.25s ease-out;
+}
+
+input[id="nav-3"]:checked ~ .glider{
+    transform: translateX(200%);
+    transition: 0.25s ease-out;
+}
+
+input[id="nav-4"]:checked ~ .glider{
+    transform: translateX(200%);
+    transition: 0.25s ease-out;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+
+
+
+
+.navbar-brand{
+    font-family: berkshire;
+    font-style: normal;
+    font-weight: 100px;
+    font-size: 30px;
+    line-height: 28px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+    height: 40px;
+}
+
+.jumbotron {
+    height: 500px;
+    background-image: url(https://images.unsplash.com/photo-1494236581341-7d38b2e7d824?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1947&q=80);
+    background-size: cover;
+    background-position: 0px;
+}
+.lead{
+    width: 200px;
+    height: 35px;
+    margin: auto;
+    background-color: var(--secondary-color);
+    font-family: berkshire;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 200px;
+}
+
+.jumbotron .container img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 100px;
+    box-shadow: 15px 20px 8px rgba(0, 0, 0, 0.45);
+}
+.about{
+    margin-top: 100px;
+}
+
+.about .container {
+    height: 60px;
+    width: max-content;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-family: berkshire;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.45);
+    border-radius: 25px;
+}
+.row{
+    text-align: center;
+}
+.aboutme .abtm {
+    height: 750px;
+    font-family: berkshire;
+    color: var(--secondary-color);
+}
+
+.aboutme .abtm img{
+    text-align: center;
+    width: 200px;
+    height: 250px;
+    border-radius: 10%;
+    margin-top: 100px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.45);
+    border: 15px solid var(--primary-color);
+    border-radius: 62px;
+}
+
+.aboutme .abtm {
+    margin-top: 50px;
+}
+
+.quote .myquote {
+    font-family: be vietnam;
+    color: var(--secondary-color);
+    letter-spacing: 6px;
+    margin-bottom: 250px;
+    margin-top: 100px;
+}
+
+.button {
+
+    box-sizing: border-box;
+    align-items: center;
+    padding: 12px 30px;
+    gap: 10px;
+
+    width: 158px;
+    height: 52px;
+
+    background: var(--secondary-color);
+    border-radius: 6px;
+    position: relative;
+    margin-left: 270px;
+
+}
+
+.text {
+    font-family: be vietnam;
+    color: var(--secondary-color);
+}
+
+.content1 {
+    font-family: be vietnam;
+    color: var(--secondary-color);
+}
+
+.myvideo{
+    width: 200px;
+    height: 400px;
+}
+
+
+.footer {
+    background-color: white;
+    margin-top: 55px;
+    padding: 10px;
+    position: relative;
+}
+
+.footer .copy {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 50px;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-top: 10px;
+    margin-center: 30px;
+    margin-bottom : 20px;
+}
+
+.footer .kontak{
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
